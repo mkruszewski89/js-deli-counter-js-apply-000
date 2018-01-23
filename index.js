@@ -1,9 +1,13 @@
-function takeANumber(katzDeliLine, name) {
-  katzDeliLine.push(name)
-  return `Welcome, ${name}. You are number ${katzDeliLine.length} in line.`
+var katzDeliLine = []
+var numberPicker = 1
+
+function takeANumber() {
+  katzDeliLine.push(numberPicker)
+  numberPicker += 1
+  return numberPicker - 1
 }
 
-function nowServing(katzDeliLine) {
+function nowServing() {
   var nowServingAnnouncement
   if (katzDeliLine.length === 0) {
     nowServingAnnouncement = `There is nobody waiting to be served!`
